@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Twitch Incremental Game</title>
+<link rel="stylesheet" type="text/css" href="interface.css" />
+</head>
+
+<body onload="getChannelName()">
+
+<h1><span id="channelName"></span>'s channel</h1>
+<hr>
+
+<div id="stats" style="float:left; width:20%">
+<h2>Channel stats</h2>
+<button class="button" onClick="addView(1)">Get View</button>
+<span id="views">0</span> channel views.
+
+<br /><br /><br />
+
+<span id="followers">0</span> followers.<br />
+</div>
+
+<div id="upgrades" style="float:left; width:40%">
+<h2>Upgrades</h2>
+<div id="videoQuality" style="float:left">
+<h4>Video Quality :</h4>
+Cost : <span id="videoQualityCost">10</span><br/>
+Bonus : +<span id="videoQualityBonus">10</span> v/s<br/>
+Quantity : <span id="videoQualityBonus">1</span><br/>
+<br/>
+<button class="button" onClick="addVideo();">Upgrade</button>
+</div>
+
+<div id="audioQuality" style="float:left; margin-left:50px">
+<h4>Audio Quality :</h4>
+Cost : <span id="audioQualityCost">5</span><br/>
+Bonus : +<span id="audioQualityBonus">5</span> v/s<br/>
+Quantity : <span id="audioQualityBonus">1</span><br/>
+<br/>
+<button class="button" onClick="addAudio();">Upgrade</button>
+</div>
+
+<div>
+
+<div id="Events" style="float:right; width:40%">
+<h2>Events</h2>
+
+<div>
+
+<script type="text/javascript" src="main.js"></script>
+</body>
