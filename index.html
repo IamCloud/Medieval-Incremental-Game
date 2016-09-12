@@ -6,45 +6,74 @@
 
 <body onload="getChannelName()">
 
-<h1><span id="channelName"></span>'s channel</h1>
+<!-- Header of page -->
+<h1><span id="channelName"></span>'s channel</h1> 
+<button id="streamingButton" class="button" onClick="toggleStreaming()">Start Streaming</button>
+<img id="changeImage" src="offline.png" style="height:32">
 <hr>
 
+<!-- Channel stats -->
 <div id="stats" style="float:left; width:20%">
 <h2>Channel stats</h2>
+<p style="font-size:11;">**You need to be streaming to get views**</p><br />
 <button class="button" onClick="addView(1)">Get View</button>
 <span id="views">0</span> channel views.
 
 <br /><br /><br />
 
-<span id="followers">0</span> followers.<br />
+Followers : <span id="followers">0</span><br />
+Followers/View : <span id="followersPerView">0</span> <br />
+Energy: <span id="energy">0</span><br />
+Money: <span id="followers">0</span>$<br />
 </div>
 
+<!-- Upgrades -->
 <div id="upgrades" style="float:left; width:40%">
 <h2>Upgrades</h2>
+<p style="font-size:11;">**You need to be offline to buy upgrades**</p>
 <div id="videoQuality" style="float:left">
 <h4>Video Quality :</h4>
-Cost : <span id="videoQualityCost">10</span><br/>
+Cost : <span id="videoQualityCost">10</span>$<br/>
 Bonus : +<span id="videoQualityBonus">10</span> v/s<br/>
-Quantity : <span id="videoQualityBonus">1</span><br/>
+Quantity : <span id="videoQualityQuantity">1</span><br/>
 <br/>
 <button class="button" onClick="addVideo();">Upgrade</button>
 </div>
 
 <div id="audioQuality" style="float:left; margin-left:50px">
 <h4>Audio Quality :</h4>
-Cost : <span id="audioQualityCost">5</span><br/>
+Cost : <span id="audioQualityCost">5</span>$<br/>
 Bonus : +<span id="audioQualityBonus">5</span> v/s<br/>
-Quantity : <span id="audioQualityBonus">1</span><br/>
+Quantity : <span id="audioQualityQuantity">1</span><br/>
 <br/>
 <button class="button" onClick="addAudio();">Upgrade</button>
 </div>
+</div>
 
-<div>
-
+<!-- Events -->
 <div id="Events" style="float:right; width:40%">
 <h2>Events</h2>
+<p style="font-size:11;">**You need to be live to use an event**</p>
+
+<div id="danceEvent" style="float:left">
+<h4>Dancing :</h4>
+Cost : <span id="danceEventCost">15</span> energy<br/>
+Bonus : +<span id="danceEventBonus">20</span> followers<br/>
+<br/>
+<button class="button" onClick="eventDance();">Dance</button>
+</div>
+
+<div id="singEvent" style="float:left; margin-left:50px">
+<h4>Singing :</h4>
+Cost : <span id="singingEventCost">30</span> energy<br/>
+Bonus : +<span id="singingEventBonus">40</span> followers<br/>
+<br/>
+<button class="button" onClick="eventSing();">Sing</button>
+</div>
+</div>
+
+</div>
 
 <div>
-
 <script type="text/javascript" src="main.js"></script>
 </body>
