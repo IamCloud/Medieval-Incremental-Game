@@ -96,7 +96,7 @@ function UpdateStats(){
 	document.getElementById('EXP').innerHTML = EXP;
 }
 
-setInterval(function(){
+window.setInterval(function(){
 EXP = EXP + expPsec;
 UpdateStats();
 }, 1000);
