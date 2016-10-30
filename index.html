@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Medieval Incremental Game</title>
+<title>Train!</title>
 <link rel="icon" href="./favicon.ico">
 <link rel="stylesheet" type="text/css" href="interface.css" />
 <script type="text/javascript" src="main.js"></script>
@@ -9,22 +9,11 @@
 <body onload="getCharName()">
 
 <!-- Header of page -->
-<h1><span id="charName"></span>'s character</h1> 
+<h1 class="header"><span id="charName"></span>'s character</h1> 
 
-<!-- Channel stats -->
-<div id="stats" style="float:left; width:20%">
-<h2>Charater stats</h2>
-<button class="button" onClick="addEXP()">Hit Dummy</button>
-<span id="EXP">0</span> EXP.
-
-<br /><br /><br />
-
-<h4>Experience/Click : <span id="expPclick">1</span></h4>
-<h4>Experience/Second : <span id="expPsec">0</span></h4>
-</div>
-
+<div id="container" style="width:100%">
 <!-- Upgrades -->
-<div id="upgrades" style="float:left; width:40%">
+<div id="upgrades" style="float:left; width:10%">
 <h2>Upgrades</h2>
 <div id="Weapon" style="float:left; margin-right:20px">
 <h4>Weapon :</h4>
@@ -55,7 +44,7 @@ Quantity : <span id="conQuantity">0</span><br/>
 </div>
 
 <!-- Mentors -->
-<div id="mentors" style="float:left; width:80%">
+<div id="mentors" style="float:right; width:10%">
 <h2>Mentors</h2>
 <div id="Beginner" style="float:left; margin-right:20px">
 <h4>Beginner Mentor :</h4>
@@ -74,6 +63,20 @@ Quantity : <span id="advancedQuantity">0</span><br/>
 <br/>
 <button class="button" onClick="addAdvanced();">Hire</button>
 </div>
+</div>
+
+<!-- Channel stats -->
+<div id="stats" style="margin:0 auto; width:90%; text-align:center">
+<h2>Charater stats</h2>
+<button class="button" onClick="addEXP()">Hit Dummy</button></br>
+<span id="EXP">0</span> EXP.
+
+<br /><br /><br />
+
+<h4>Experience/Click : <span id="expPclick">1</span></h4>
+<h4>Experience/Second : <span id="expPsec">0</span></h4>
+</div>
+
 </div>
 
 <div>
