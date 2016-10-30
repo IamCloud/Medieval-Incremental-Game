@@ -16,13 +16,12 @@ var expPsec = 0;
 function addEXP(){
 		EXP = EXP + expPclick;
 		document.getElementById("EXP").innerHTML = EXP;
-};
+}
 
-function getCharName()
-{
-    ChannelName = prompt("Enter your character name: ", "Marler");
+function getCharName(){
+    charName = prompt("Enter your character name: ", "Marler");
 	document.getElementById('charName').innerHTML = charName;
-};
+}
 
 function addWeapon(){
 	if (EXP > WeaponCost){
@@ -34,7 +33,7 @@ function addWeapon(){
 		expPclick++;
 		UpdateStats();
 	}
-};
+}
 
 function addDummy(){
 	if (EXP > DummyCost){
@@ -46,7 +45,7 @@ function addDummy(){
 		expPclick += 5;
 		UpdateStats();
 	}
-};
+}
 
 function addCon(){
 	if (EXP > ConCost){
@@ -58,10 +57,10 @@ function addCon(){
 		expPclick += 10;
 		UpdateStats();
 	}
-};
+}
 
 function UpdateStats(){
 	document.getElementById('expPclick').innerHTML = expPclick;
 	document.getElementById('expPsec').innerHTML = expPsec;
 	document.getElementById('EXP').innerHTML = EXP;
-};
+}
