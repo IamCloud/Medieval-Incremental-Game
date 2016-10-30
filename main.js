@@ -1,75 +1,67 @@
-var ChannelName= "11tinic";
-var Views = 0;
-var ViewsCurrency = 0;
-var Followers = 0;
-var Energy = 0;
-var streaming = false;
+var charName= "Marler";
+var EXP = 0;
+var WeaponCost = 10;
+var WeaponBonus = 1;
+var WeaponQuantity = 0;
+var DummyCost = 100;
+var DummyBonus = 5;
+var DummyQuantity = 0;
+var ConCost = 1000;
+var ConBonus = 10;
+var ConQuantity = 0;
 
-function addView(number){
-	if (streaming){
-		Views = Views + number;
-		document.getElementById("views").innerHTML = Views;
-		ViewsCurrency = ViewsCurrency + number;
+var expPclick = 1;
+var expPsec = 0;
+
+function addEXP(){
+		EXP = EXP + expPclick;
+		document.getElementById("EXP").innerHTML = EXP;
+};
+
+function getCharName()
+{
+    ChannelName = prompt("Enter your character name: ", "Marler");
+	document.getElementById('charName').innerHTML = charName;
+};
+
+function addWeapon(){
+	if (EXP > WeaponCost){
+		EXP -= WeaponCost;
+		WeaponQuantity++;
+		WeaponCost = Math.round(WeaponCost * (1.2));
+		document.getElementById('weaponCost').innerHTML = WeaponCost;
+		document.getElementById('weaponQuantity').innerHTML = WeaponQuantity;
+		expPclick++;
+		UpdateStats();
 	}
 };
 
-function updateFollowers(){
-	var followerCost = Math.floor(10 * Math.pow(1.01,Followers));
-    
-	if(ViewsCurrency >= followerCost){
-        Followers++;
-		addEnergy(1);
-    	ViewsCurrency = ViewsCurrency - followerCost;
-        document.getElementById('followers').innerHTML = Followers;
-		document.getElementById('followersPerView').innerHTML = Math.round(Followers/Views * 100) / 100;
-    };
-    var nextCost = Math.floor(10 * Math.pow(1.01,Followers));
-}
-
-function addEnergy(number){
-	Energy = Energy + number;
-	document.getElementById('energy').innerHTML = Energy;
-}
-
-function toggleStreaming() {
-	if (streaming){
-		streaming = false;
-		document.getElementById('streamingButton').innerHTML = "Start Streaming";
-		document.getElementById('changeImage').src = 'offline.png';
-	}else{
-		streaming = true;
-		document.getElementById('streamingButton').innerHTML = "Stop Streaming";
-		document.getElementById('changeImage').src = 'online.png';
+function addDummy(){
+	if (EXP > DummyCost){
+		EXP -= DummyCost;
+		DummyQuantity++;
+		DummyCost = Math.round(DummyCost * (1.2));
+		document.getElementById('dummyCost').innerHTML = DummyCost;
+		document.getElementById('dummyQuantity').innerHTML = DummyQuantity;
+		expPclick += 5;
+		UpdateStats();
 	}
-}
+};
 
-function eventDance() {
-	if (streaming && Energy >= 15){
-		Energy = Energy - 15;
-		Followers = Followers + 20;
-		document.getElementById('followers').innerHTML = Followers;
-		document.getElementById('energy').innerHTML = Energy;
+function addCon(){
+	if (EXP > ConCost){
+		EXP -= ConCost;
+		ConQuantity++;
+		ConCost = Math.round(ConCost * (1.2));
+		document.getElementById('conCost').innerHTML = ConCost;
+		document.getElementById('conQuantity').innerHTML = ConQuantity;
+		expPclick += 10;
+		UpdateStats();
 	}
-}
+};
 
-function eventSing() {
-	if (streaming && Energy >= 30){
-		Energy = Energy - 30;
-		Followers = Followers + 40;
-		document.getElementById('followers').innerHTML = Followers;
-		document.getElementById('energy').innerHTML = Energy;
-	}
-}
-
-function getChannelName()
-{
-    ChannelName = prompt("Enter your channel name: ", "11tinic");
-	document.getElementById('channelName').innerHTML = ChannelName;
-}
-
-window.setInterval(function(){
-	if (streaming == true){
-		addView(Math.floor(Followers/15));
-		updateFollowers();
-	}
-}, 1000);
+function UpdateStats(){
+	document.getElementById('expPclick').innerHTML = expPclick;
+	document.getElementById('expPsec').innerHTML = expPsec;
+	document.getElementById('EXP').innerHTML = EXP;
+};
