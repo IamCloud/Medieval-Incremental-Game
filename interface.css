@@ -1,3 +1,11 @@
+body{
+user-drag: none; 
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
 .button {
   background: #6e591a;
   background-image: -webkit-linear-gradient(top, #6e591a, #574b1b);
@@ -65,4 +73,9 @@ text-shadow: rgba(0,0,0,.2) 2px 6px 5px,rgba(255,255,255,.4) 0 -4px 30px;
 .header {
 	width:100%;
 	text-align:center;
+}
+
+.dummy {
+	max-height:200px;
+	max-width:200px;
 }
