@@ -69,7 +69,7 @@ function addConcentration(){
 	if (EXP >= ConcentrationCost){
 		EXP -= ConcentrationCost;
 		ConcentrationQuantity++;
-		ConcentrationCost = Math.round(ConCost * (1.1));
+		ConcentrationCost = Math.round(ConcentrationCost * (1.1));
 		ConcentrationTotalBonus += 10;
 		document.getElementById('ConcentrationCost').innerHTML = ConcentrationCost;
 		document.getElementById('ConcentrationQuantity').innerHTML = ConcentrationQuantity;
