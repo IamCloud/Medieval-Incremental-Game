@@ -6,7 +6,7 @@
 <script type="text/javascript" src="main.js"></script>
 </head>
 
-<body onload="getCharName()" style="background-image: url(images/background.jpg)">
+<body onload="getCharName()" style="background-image: url(images/background.jpg)" onMouseUp="DummyMouseUp()">
 
 <!-- Header of page -->
 <h1 class="header"><span id="charName"></span> character sheet</h1> 
@@ -74,7 +74,7 @@ Quantity : <span id="advancedQuantity">0</span><br/>
 <!-- Character stats -->
 <div id="stats" style="margin:0 auto; width:90%; text-align:center">
 <h2>Character stats</h2>
-<input type="image" src="images/DummyIdle.png" class="dummy" id="dummyImg" onMouseDown="showDummyHit()" onMouseUp="addEXP()"/>
+<input type="image" draggable="false" src="images/DummyIdle.png" class="dummy" id="dummyImg" onMouseDown="DummyMouseDown()" onMouseUp="DummyMouseUp()"/>
 <div style="font-size:30px;"><span id="EXP">0</span> Exp.</div>
 
 <h4>Experience/Click : <span id="expPclick">1</span></h4>

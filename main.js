@@ -28,9 +28,7 @@ var expPsec = 0;
 var Damage = 1;
 
 
-function addEXP(){
-		EXP = EXP + expPclick;
-		document.getElementById("EXP").innerHTML = EXP;
+function DummyMouseUp(){		
 		document.getElementById('dummyImg').src = "images/DummyIdle.png";
 }
 
@@ -115,11 +113,17 @@ function UpdateStats(){
 	document.getElementById('EXP').innerHTML = EXP;
 }
 
-function showDummyHit() {
+function DummyMouseDown() {
+	EXP = EXP + expPclick;
+	document.getElementById("EXP").innerHTML = EXP;
 	document.getElementById('dummyImg').src = "images/DummyHit.png";
-    }
+}
 	
 window.setInterval(function(){
 EXP = EXP + expPsec;
 UpdateStats();
 }, 1000);
+
+$("img").mousedown(function(){
+    return false;
+});
