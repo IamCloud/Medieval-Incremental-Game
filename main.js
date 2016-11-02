@@ -117,13 +117,13 @@ function DummyMouseDown() {
 	EXP = EXP + expPclick;
 	document.getElementById("EXP").innerHTML = EXP;
 	document.getElementById('dummyImg').src = "images/DummyHit.png";
+	
+	document.getElementById("Damage").innerHTML = expPclick + " damage";
+	
 }
 	
 window.setInterval(function(){
 EXP = EXP + expPsec;
+document.getElementById("Damage").innerHTML = ".";
 UpdateStats();
 }, 1000);
-
-$("img").mousedown(function(){
-    return false;
-});
