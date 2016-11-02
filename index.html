@@ -18,29 +18,29 @@
 <h2>Upgrades</h2>
 <div id="Weapon" style="float:left; margin-right:20px">
 <h4>Weapon :</h4>
-Cost : <span id="weaponCost">10</span> EXP<br/>
-Bonus : +<span id="weaponBonus">1</span> EPC<br/>
-Quantity : <span id="weaponQuantity">0</span><br/>
+Cost : <span id="WeaponCost">100</span> EXP<br/>
+Bonus : +<span id="WeaponBonus">5</span> EPC<br/>
+Quantity : <span id="WeaponQuantity">0</span><br/>
 <br/>
 <button class="button" onClick="addWeapon();">Upgrade</button>
 </div>
 
 <div id="Dummy" style="float:left; margin-right:20px">
 <h4>Dummy quality :</h4>
-Cost : <span id="dummyCost">100</span> EXP<br/>
-Bonus : +<span id="dummyBonus">5</span> EPC<br/>
-Quantity : <span id="dummyQuantity">0</span><br/>
+Cost : <span id="DummyCost">100</span> EXP<br/>
+Bonus : +<span id="DummyBonus">5</span> EPC<br/>
+Quantity : <span id="DummyQuantity">0</span><br/>
 <br/>
 <button class="button" onClick="addDummy();">Upgrade</button>
 </div>
 
 <div id="Concentration" style="float:left; margin-right:20px">
 <h4>Concentration :</h4>
-Cost : <span id="conCost">1000</span> EXP<br/>
-Bonus : +<span id="conBonus">10</span> EPC<br/>
-Quantity : <span id="conQuantity">0</span><br/>
+Cost : <span id="ConcentrationCost">1000</span> EXP<br/>
+Bonus : +<span id="ConcentrationBonus">10</span> EPC<br/>
+Quantity : <span id="ConcentrationQuantity">0</span><br/>
 <br/>
-<button class="button" onClick="addCon();">Upgrade</button>
+<button class="button" onClick="addConcentration();">Upgrade</button>
 </div>
 </div>
 
@@ -66,10 +66,10 @@ Quantity : <span id="advancedQuantity">0</span><br/>
 </div>
 </div>
 
-<!-- Channel stats -->
+<!-- Character stats -->
 <div id="stats" style="margin:0 auto; width:90%; text-align:center">
-<h2>Charater stats</h2>
-<input type="image" src="images/dummy.png" class="dummy" onClick="addEXP()"/>
+<h2>Character stats</h2>
+<input type="image" src="images/dummy.png" class="dummy" onMouseUp="addEXP()"/>
 <div style="font-size:30px;"><span id="EXP">0</span> Exp.</div>
 
 <h4>Experience/Click : <span id="expPclick">1</span></h4>

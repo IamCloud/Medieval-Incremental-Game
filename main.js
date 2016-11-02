@@ -6,9 +6,9 @@ var WeaponQuantity = 0;
 var DummyCost = 100;
 var DummyBonus = 5;
 var DummyQuantity = 0;
-var ConCost = 1000;
-var ConBonus = 10;
-var ConQuantity = 0;
+var ConcentrationCost = 1000;
+var ConcentrationBonus = 10;
+var ConcentrationQuantity = 0;
 
 var begCost = 10;
 var begBonus = 1;
@@ -35,8 +35,8 @@ function addWeapon(){
 		EXP -= WeaponCost;
 		WeaponQuantity++;
 		WeaponCost = Math.round(WeaponCost * (1.2));
-		document.getElementById('weaponCost').innerHTML = WeaponCost;
-		document.getElementById('weaponQuantity').innerHTML = WeaponQuantity;
+		document.getElementById('WeaponCost').innerHTML = WeaponCost;
+		document.getElementById('WeaponQuantity').innerHTML = WeaponQuantity;
 		expPclick++;
 		UpdateStats();
 	}
@@ -47,20 +47,20 @@ function addDummy(){
 		EXP -= DummyCost;
 		DummyQuantity++;
 		DummyCost = Math.round(DummyCost * (1.2));
-		document.getElementById('dummyCost').innerHTML = DummyCost;
-		document.getElementById('dummyQuantity').innerHTML = DummyQuantity;
+		document.getElementById('DummyCost').innerHTML = DummyCost;
+		document.getElementById('DummyQuantity').innerHTML = DummyQuantity;
 		expPclick += 5;
 		UpdateStats();
 	}
 }
 
-function addCon(){
-	if (EXP >= ConCost){
-		EXP -= ConCost;
-		ConQuantity++;
-		ConCost = Math.round(ConCost * (1.2));
-		document.getElementById('conCost').innerHTML = ConCost;
-		document.getElementById('conQuantity').innerHTML = ConQuantity;
+function addConcentration(){
+	if (EXP >= ConcentrationCost){
+		EXP -= ConcentrationCost;
+		ConcentrationQuantity++;
+		ConcentrationCost = Math.round(ConCost * (1.2));
+		document.getElementById('ConcentrationCost').innerHTML = ConcentrationCost;
+		document.getElementById('ConcentrationQuantity').innerHTML = ConcentrationQuantity;
 		expPclick += 10;
 		UpdateStats();
 	}
