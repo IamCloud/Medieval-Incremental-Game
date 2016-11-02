@@ -25,9 +25,13 @@ var advTotalBonus = 0;
 var expPclick = 1;
 var expPsec = 0;
 
+var Damage = 1;
+
+
 function addEXP(){
 		EXP = EXP + expPclick;
 		document.getElementById("EXP").innerHTML = EXP;
+		document.getElementById('dummyImg').src = "images/DummyIdle.png";
 }
 
 function getCharName(){
@@ -111,6 +115,10 @@ function UpdateStats(){
 	document.getElementById('EXP').innerHTML = EXP;
 }
 
+function showDummyHit() {
+	document.getElementById('dummyImg').src = "images/DummyHit.png";
+    }
+	
 window.setInterval(function(){
 EXP = EXP + expPsec;
 UpdateStats();
