@@ -1,4 +1,4 @@
-var charName= "Marler";
+var charName= "Pemda";
 var EXP = 0;
 var WeaponCost = 10;
 var WeaponBonus = 1;
@@ -31,7 +31,7 @@ function addEXP(){
 }
 
 function getCharName(){
-    charName = prompt("Enter your character name: ", "Marler");
+    charName = prompt("Enter your character name: ", "Pemda");
 	document.getElementById('charName').innerHTML = charName;
 }
 
