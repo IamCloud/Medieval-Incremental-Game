@@ -6,4 +6,6 @@ A Medieval Incremental Game with no name yet but it is about hitting dummies and
 - [ ] Using setTimeout for game loop.
 - [ ] Change gameplay by adding currency.
 - [ ] Implement saving.
-- [ ] Change text color to be easier to see.
+
+**DONE**
+- [X] Change text color to be easier to see.
