@@ -177,8 +177,13 @@ function DPS(){
 	loseLife(TurnDamage);
 }
 	
-window.setInterval(function(){
-DPS();
-document.getElementById("HitDamage").innerHTML = ".";
-UpdateStats();
-}, 1000);
+function startTimer(){
+	DPS();
+	document.getElementById("HitDamage").innerHTML = ".";
+	UpdateStats();
+setTimeout(function(){
+	startTimer();
+	}, 1000);
+}
+	
+
