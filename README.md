@@ -3,6 +3,7 @@ A Medieval Incremental Game with no name yet but it is about hitting dummies and
 
 
 **TODO**
+- [ ] Senior mentor issue.
 - [ ] Change gameplay by adding currency.
 - [ ] Implement saving.
 
