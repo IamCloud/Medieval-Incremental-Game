@@ -13,14 +13,9 @@ var WeaponNames = ["Unarmed", "Gauntlet", "Spiked Gauntlet", "Dagger",
 "Glaive", "Greatclub", 
 "Greataxe", "Greatsword", "God Weapon"];
 
-var DummyCost = 100;
-var DummyBonus = 5;
-var DummyQuantity = 0;
-var DummyTotalBonus = 0;
-var ConcentrationCost = 1000;
-var ConcentrationBonus = 10;
-var ConcentrationQuantity = 0;
-var ConcentrationTotalBonus = 0;
+var DummyCost = 10;
+var DummyLife = 10;
+var DummyLevel = 0;
 
 var begCost = 50;
 var begBonus = 5;
@@ -74,6 +69,24 @@ function addWeapon(){
 		document.getElementById('WeaponName').innerHTML = WeaponName;
 		Damage = WeaponDamage;		
 		UpdateStats();
+	}
+}
+
+function addDummy() {
+	if (EXP >= DummyCost){
+	EXP-=DummyCost;
+	DummyLife = Math.round(DummyLife * (1.20));
+	totalLife = DummyLife;
+	DummyLevel++;
+	DummyCost = Math.round(DummyCost * (1.15) + 1);
+
+		document.getElementById('DummyCost').innerHTML = DummyCost;
+		document.getElementById('DummyLife').innerHTML = DummyLife;
+		document.getElementById('DummyLevel').innerHTML = DummyLevel;
+		document.getElementById('WeaponName').innerHTML = WeaponName;
+		
+	life = DummyLife;
+	UpdateStats();
 	}
 }
 
@@ -169,8 +182,6 @@ function loseLife(dmg) {
 
 function kill (){
 	Currency += Math.round(totalLife/5);
-	totalLife = Math.round(totalLife * (1.05)); 
-	life = totalLife;
 	UpdateStats();
 }
 	

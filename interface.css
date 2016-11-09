@@ -82,18 +82,18 @@ text-shadow: rgba(0,0,0,.2) 2px 6px 5px,rgba(255,255,255,.4) 0 -4px 30px;
 
 .character {
 	margin:0 auto;
-	width:60%;
+	width:40%;
 	text-align:center;
 }
 
 .upgrades {
 	float:left; 
-	width:20%;
+	width:30%;
 }
 
 .mentors {
 	float:right; 
-	width:20%;
+	width:30%;
 }
 
 #life {
