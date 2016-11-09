@@ -4,6 +4,8 @@ A Medieval Incremental Game with no name yet but it is about hitting dummies and
 
 **TODO**
 - [ ] Implement saving.
+- [ ] Add upgrades.
+- [ ] Add used to experience.
 
 **DONE**
 - [X] Senior mentor issue.
