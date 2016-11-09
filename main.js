@@ -23,11 +23,11 @@ var ConcentrationQuantity = 0;
 var ConcentrationTotalBonus = 0;
 
 var begCost = 50;
-var begBonus = 1;
+var begBonus = 5;
 var begQuantity = 0;
 var begTotalBonus = 0;
 var advCost = 500;
-var advBonus = 5;
+var advBonus = 10;
 var advQuantity = 0;
 var advTotalBonus = 0;
 var senCost = 5000;
