@@ -14,89 +14,82 @@
 
 <div id="container" style="width:100%">
 <!-- Upgrades -->
-<div id="upgrades" style="float:left; width:10%">
+<div class="upgrades">
 <h2>Upgrades</h2>
 <div id="Weapon" style="float:left; margin-right:20px">
 <h4>Weapon :</h4>
-Cost : <span id="WeaponCost">10</span> EXP<br/>
-Bonus : +<span id="WeaponBonus">1</span> DPA<br/>
-Quantity : <span id="WeaponQuantity">0</span><br/>
-<b>Total Bonus</b> : <span id="WeaponTotalBonus">0</span> DPC<br/>
+Name : <span id="WeaponName">Unarmed</span><br/>
+Damage : <span id="WeaponDamage">1</span><br/>
+Level : <span id="WeaponLevel">0</span><br/>
+Cost : <span id="WeaponCost">10</span> Gold<br/>
 <br/>
 <button class="button" onClick="addWeapon();">Upgrade</button>
 </div>
 
-<div id="Dummy" style="float:left; margin-right:20px">
-<h4>Dummy quality :</h4>
-Cost : <span id="DummyCost">100</span> EXP<br/>
-Bonus : +<span id="DummyBonus">5</span> DPA<br/>
-Quantity : <span id="DummyQuantity">0</span><br/>
-<b>Total Bonus</b> : <span id="DummyTotalBonus">0</span> DPC<br/>
-<br/>
-<button class="button" onClick="addDummy();">Upgrade</button>
-</div>
-
-<div id="Concentration" style="float:left; margin-right:20px">
-<h4>Concentration :</h4>
-Cost : <span id="ConcentrationCost">1000</span> EXP<br/>
-Bonus : +<span id="ConcentrationBonus">10</span> DPA<br/>
-Quantity : <span id="ConcentrationQuantity">0</span><br/>
-<b>Total Bonus</b> : <span id="ConcentrationTotalBonus">0</span> DPC<br/>
-<br/>
-<button class="button" onClick="addConcentration();">Upgrade</button>
 </div>
 </div>
 
 <!-- Mentors -->
-<div id="mentors" style="float:right; width:10%">
+<div class="mentors">
 <h2>Mentors</h2>
 <div id="Beginner" style="float:left; margin-right:20px">
 <h4>Beginner Mentor :</h4>
-Cost : <span id="beginnerCost">100</span> EXP<br/>
-Bonus : +<span id="beginnerBonus">1</span> APS<br/>
+Cost : <span id="beginnerCost">50</span> Gold<br/>
+Bonus : +<span id="beginnerBonus">1</span> DPS<br/>
 Quantity : <span id="beginnerQuantity">0</span><br/>
-<b>Total Bonus</b> : <span id="beginnerTotalBonus">0</span> APS<br/>
+<b>Total Bonus</b> : <span id="beginnerTotalBonus">0</span> DPS<br/>
 <br/>
 <button class="button" onClick="addBeginner();">Hire</button>
 </div>
-
 <div id="Advanced" style="float:left; margin-right:20px">
 <h4>Advanced Mentor :</h4>
-Cost : <span id="advancedCost">1000</span> EXP<br/>
-Bonus : +<span id="advancedBonus">5</span> APS<br/>
+Cost : <span id="advancedCost">500</span> Gold<br/>
+Bonus : +<span id="advancedBonus">5</span> DPS<br/>
 Quantity : <span id="advancedQuantity">0</span><br/>
-<b>Total Bonus</b> : <span id="advancedTotalBonus">0</span> APS<br/>
+<b>Total Bonus</b> : <span id="advancedTotalBonus">0</span> DPS<br/>
 <br/>
 <button class="button" onClick="addAdvanced();">Hire</button>
 </div>
 
 <div id="Senior" style="float:left; margin-right:20px">
 <h4>Senior Mentor :</h4>
-Cost : <span id="seniorCost">10000</span> EXP<br/>
-Bonus : +<span id="seniorBonus">20</span> APS<br/>
+Cost : <span id="seniorCost">5000</span> Gold<br/>
+Bonus : +<span id="seniorBonus">20</span> DPS<br/>
 Quantity : <span id="seniorQuantity">0</span><br/>
-<b>Total Bonus</b> : <span id="seniorTotalBonus">0</span> APS<br/>
+<b>Total Bonus</b> : <span id="seniorTotalBonus">0</span> DPS<br/>
 <br/>
 <button class="button" onClick="addSenior();">Hire</button>
 </div>
+
+<div id="God" style="float:left; margin-right:20px">
+<h4>God Mentor :</h4>
+Cost : <span id="godCost">100000</span> Gold<br/>
+Bonus : +<span id="godBonus">100</span> DPS<br/>
+Quantity : <span id="godQuantity">0</span><br/>
+<b>Total Bonus</b> : <span id="godTotalBonus">0</span> DPS<br/>
+<br/>
+<button class="button" onClick="addGod();">Hire</button>
+</div>
+
 </div>
 
 
 </div>
 
 <!-- Character stats -->
-<div id="stats" style="margin:0 auto; width:90%; text-align:center">
+<div class="character">
 <h2>Character stats</h2>
 <span id="lifeValue">0</span>/<span id="totalLife">0</span><br/>
 <div id="life"><div id="lifeBar"></div></div>
 <span id="HitDamage">.</span><br/>
 <input type="image" draggable="false" src="images/DummyIdle.png" class="dummy" id="dummyImg" onMouseDown="DummyMouseDown()" onMouseUp="DummyMouseUp()"/>
-<div style="font-size:30px;"><span id="EXP">0</span> Exp.</div>
+<div style="text-align:center; font-size:30px;"><span id="gold">0</span> Gold</div>
 
-<h4>Damage : <span id="Damage">1</span></h4>
-<h4>Damage/second : <span id="TurnDamage">1</span></h4>
-<h4>Experience/Click : <span id="expPclick">0.1</span></h4>
-<h4>Experience/Second : <span id="expPsec">0</span></h4>
+<h4>Total Experience : <span id="EXP">0</span></h4> 
+<h4>Damage/click : <span id="Damage">1</span></h4>
+<h4>Experience/click : <span id="expPclick">0.1</span></h4>
+<h4>Damage/second : <span id="TurnDamage">0</span></h4>
+
 
 </div>
 

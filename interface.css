@@ -5,6 +5,8 @@ user-select: none;
 -webkit-user-drag: none;
 -webkit-user-select: none;
 -ms-user-select: none;
+width:100%;
+height:100%;
 }
 .button {
   background: #6e591a;
@@ -49,12 +51,10 @@ span {
 	color:black;
 }
 
-#EXP {
+#gold {
 color:#13488F;
 font-size:50px;
-text-align:left;
 font-family:courier new, courier, monospace;
-line-height:1;
 font-weight:bold;
 }
 
@@ -80,9 +80,25 @@ text-shadow: rgba(0,0,0,.2) 2px 6px 5px,rgba(255,255,255,.4) 0 -4px 30px;
 	max-width:200px;
 }
 
+.character {
+	margin:0 auto;
+	width:60%;
+	text-align:center;
+}
+
+.upgrades {
+	float:left; 
+	width:20%;
+}
+
+.mentors {
+	float:right; 
+	width:20%;
+}
+
 #life {
   position: relative;
-  width: 20%;
+  width: 30%;
   height: 30px;
   background-color: #DC7633;
   text-align:center;
