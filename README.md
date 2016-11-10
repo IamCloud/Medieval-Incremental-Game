@@ -3,11 +3,14 @@ A Medieval Incremental Game with no name yet but it is about hitting dummies and
 
 
 **TODO**
+- [ ] Add upgrade to improve damage/sec.
+- [ ] Show more stats.
+- [ ] Add more use to experience.
+- [ ] Balance the game by slowing down game speed.
 - [ ] Implement saving.
-- [ ] Add upgrades.
-- [ ] Add used to experience.
 
 **DONE**
+- [X] Add use to experience.
 - [X] Senior mentor issue.
 - [X] Change gameplay by adding currency.
 - [X] Using setTimeout for game loop.
