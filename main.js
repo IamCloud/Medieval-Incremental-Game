@@ -153,7 +153,7 @@ function UpdateStats(){
 	document.getElementById("TurnDamage").innerHTML = hitPsec;
 	document.getElementById('EXP').innerHTML = EXP;
 	document.getElementById("expPclick").innerHTML = expPclick;
-	document.getElementById("lifeValue").innerHTML = Math.round(life * 100) / 100;
+	document.getElementById("lifeValue").innerHTML = parseFloat(Math.round(life * 100) / 100).toFixed(1);
 	document.getElementById("totalLife").innerHTML = totalLife;
 	document.getElementById("gold").innerHTML = Currency;
 }

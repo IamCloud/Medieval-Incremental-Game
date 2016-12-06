@@ -23,7 +23,7 @@ Life : <span id="DummyLife">10</span><br/>
 Level : <span id="DummyLevel">0</span><br/>
 Cost : <span id="DummyCost">10</span> EXP<br/>
 <br/>
-<button class="button" onClick="addDummy();">Upgrade</button>
+<input type="image" draggable="false" src="images/buttonUpgrade.png" onClick="addDummy()"/>
 </div>
 
 <div id="Weapon" style="float:left; margin-right:20px">
@@ -33,7 +33,7 @@ Damage : <span id="WeaponDamage">1</span><br/>
 Level : <span id="WeaponLevel">0</span><br/>
 Cost : <span id="WeaponCost">10</span> Gold<br/>
 <br/>
-<button class="button" onClick="addWeapon();">Upgrade</button>
+<input type="image" draggable="false" src="images/buttonUpgrade.png" onClick="addWeapon()"/>
 </div>
 
 </div>
@@ -49,7 +49,7 @@ Bonus : +<span id="beginnerBonus">5</span> DPS<br/>
 Quantity : <span id="beginnerQuantity">0</span><br/>
 <b>Total Bonus</b> : <span id="beginnerTotalBonus">0</span> DPS<br/>
 <br/>
-<button class="button" onClick="addBeginner();">Hire</button>
+<input type="image" draggable="false" src="images/buttonMentor.png" onClick="addBeginner()"/>
 </div>
 <div id="Advanced" style="float:left; margin-right:20px">
 <h4>Advanced Mentor :</h4>
@@ -58,7 +58,7 @@ Bonus : +<span id="advancedBonus">10</span> DPS<br/>
 Quantity : <span id="advancedQuantity">0</span><br/>
 <b>Total Bonus</b> : <span id="advancedTotalBonus">0</span> DPS<br/>
 <br/>
-<button class="button" onClick="addAdvanced();">Hire</button>
+<input type="image" draggable="false" src="images/buttonMentor.png" onClick="addAdvanced()"/>
 </div>
 
 <div id="Senior" style="float:left; margin-right:20px">
@@ -68,7 +68,7 @@ Bonus : +<span id="seniorBonus">20</span> DPS<br/>
 Quantity : <span id="seniorQuantity">0</span><br/>
 <b>Total Bonus</b> : <span id="seniorTotalBonus">0</span> DPS<br/>
 <br/>
-<button class="button" onClick="addSenior();">Hire</button>
+<input type="image" draggable="false" src="images/buttonMentor.png" onClick="addSenior()"/>
 </div>
 
 <div id="God" style="float:left; margin-right:20px">
@@ -78,7 +78,7 @@ Bonus : +<span id="godBonus">100</span> DPS<br/>
 Quantity : <span id="godQuantity">0</span><br/>
 <b>Total Bonus</b> : <span id="godTotalBonus">0</span> DPS<br/>
 <br/>
-<button class="button" onClick="addGod();">Hire</button>
+<input type="image" draggable="false" src="images/buttonMentor.png" onClick="addGod()"/>
 </div>
 
 </div>
@@ -89,7 +89,7 @@ Quantity : <span id="godQuantity">0</span><br/>
 <!-- Character stats -->
 <div class="character">
 <h2>Character stats</h2>
-<span id="lifeValue">0</span>/<span id="totalLife">0</span><br/>
+<span id="lifeValue">0</span> / <span id="totalLife">0</span><br/>
 <div id="life"><div id="lifeBar"></div></div>
 <span id="HitDamage">.</span><br/>
 <input type="image" draggable="false" src="images/DummyIdle.png" class="dummy" id="dummyImg" onMouseDown="DummyMouseDown()" onMouseUp="DummyMouseUp()"/>
